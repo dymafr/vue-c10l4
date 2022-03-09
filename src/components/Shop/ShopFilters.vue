@@ -30,9 +30,9 @@ const emit = defineEmits<{
           type="radio"
           @input="emit('updateFilter', { priceRange })"
           name="priceRange"
-          :id="priceRange[0] + ''"
+          :id="priceRange[0].toString()"
         />
-        <label :for="priceRange[0] + ''">
+        <label :for="priceRange[0].toString()">
           {{
             priceRange[0] === 0
               ? 'Tous les prix'
